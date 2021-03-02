@@ -14,18 +14,18 @@
             color: white;
         }
 
-        #title {
-            height: 5vh;
+        #titles {
+            height: 7vh;
             padding-top: 20px;
             padding-left: 10px;
         }
 
-        #title h2 {
+        .title {
             cursor: pointer;
         }
 
         #content {
-            height: 95vh;
+            height: 93vh;
             padding: 10px;
         }
 
@@ -44,18 +44,24 @@
 <body>
     <div class="container-fluid">
 
-        <div id="title" class="row">
+        <div id="titles" class="row">
 
             <div class="col">
-                <h2 onclick="reload('master')">Master</h2>
+                <span onclick="reload('master')" class="display-4 title">Master</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span>内网地址：<a href="javascript:void(0)">http://master</a></span>
             </div>
 
             <div class="col">
-                <h2 onclick="reload('slave1')">Slave1</h2>
+                <span onclick="reload('slave1')" class="display-4 title">Slave1</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span>内网地址：<a href="javascript:void(0)">http://slave1</a></span>
             </div>
 
             <div class="col">
-                <h2 onclick="reload('slave2')">Slave2</h2>
+                <span onclick="reload('slave2')" class="display-4 title">Slave2</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span>内网地址：<a href="javascript:void(0)">http://slave2</a></span>
             </div>
 
         </div>
