@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+
+  master:
+    image: lixinyang/bigdata
+    restart: always
+
+  slave1:
+    image: lixinyang/bigdata
+    restart: always
+
+  slave2:
+    image: lixinyang/bigdata
+    restart: always
+
+  reverse-proxy:
+    image: nginx
+    depends_on:
+      - master
+      - slave1
+      - slave2
+    ports:
+      - "8080:80"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./index.html:/usr/share/nginx/html/index.html
